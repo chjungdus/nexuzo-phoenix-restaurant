@@ -17,12 +17,12 @@
     <a href="#top" class="logo">Phoenix</a>
     <nav class="main-nav" id="mainNav">
       <a href="#speisekarte">Speisekarte</a>
-      <a href="#ueber-uns">Über uns</a>
+      <a href="#kuechen-reise">Küchen-Reise</a>
       <a href="#galerie">Galerie</a>
-      <a href="#faq">FAQ</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#reservierung">Reservierung</a>
+      <a href="#so-finden-sie-uns">Kontakt</a>
     </nav>
-    <a href="#kontakt" class="btn btn-primary nav-cta">Tisch reservieren</a>
+    <a href="#reservierung" class="btn btn-primary nav-cta">Tisch reservieren</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -31,6 +31,9 @@
 
 <main>
 
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-leaf" aria-hidden="true">
       <svg viewBox="0 0 300 500" class="leaf-illustration">
@@ -46,7 +49,7 @@
       <h1>Vietnamesische Küche<br>mit Herz</h1>
       <p class="hero-lede">Traditionelle Rezepte, frisch zubereitet, in einem familiär geführten Lokal mit kleinem, gemütlichem Außenbereich.</p>
       <div class="hero-actions">
-        <a href="#kontakt" class="btn btn-primary">Tisch reservieren</a>
+        <a href="#reservierung" class="btn btn-primary">Tisch reservieren</a>
         <a href="tel:+4921133683033" class="btn btn-outline">+49 211 33683033</a>
       </div>
       <div class="hero-meta">
@@ -60,6 +63,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       USP BAR
+  ════════════════════════════════════════════ -->
   <section class="usp-bar animate">
     <div class="usp-inner">
       <div class="usp-item">
@@ -77,113 +83,526 @@
     </div>
   </section>
 
-  <section class="section" id="speisekarte">
+  <!-- ═══════════════════════════════════════════
+       MENU TAB-SWITCHER + SAISONALER FILTER
+  ════════════════════════════════════════════ -->
+  <section class="section menu-tabs-section" id="speisekarte">
     <div class="section-head animate">
       <p class="eyebrow">Speisekarte</p>
-      <h2>Unsere Klassiker</h2>
-      <p class="section-lede">Eine Auswahl unserer Gerichte — die vollständige Karte gibt es im Restaurant.</p>
+      <h2>Unsere Küche</h2>
+      <p class="section-lede">Traditionelle Rezepte, täglich frisch zubereitet — die vollständige Karte liegt im Restaurant aus.</p>
     </div>
 
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Vorspeisen &amp; Suppen</h3>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Pho Bo</span><span class="menu-price">12,50 €</span></div>
+    <!-- Tabs -->
+    <div class="menu-tabs animate">
+      <button class="menu-tab active" data-tab="vorspeisen">Vorspeisen</button>
+      <button class="menu-tab" data-tab="hauptgerichte">Hauptgerichte</button>
+      <button class="menu-tab" data-tab="banh-mi">Bánh Mì</button>
+      <button class="menu-tab" data-tab="getraenke">Getränke</button>
+      <button class="menu-tab" data-tab="desserts">Desserts</button>
+    </div>
+
+    <!-- Tab-Panels -->
+    <div class="menu-tab-content">
+
+      <!-- VORSPEISEN -->
+      <div class="menu-tab-panel active" id="tab-vorspeisen">
+        <div class="menu-cards">
+          <div class="menu-card" data-category="fleisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Pho Bo (Empfehlung: 800x600px) -->
+              <img src="images/dish-pho.jpg" alt="Pho Bo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-fleisch">Fleisch</span>
+                <span class="tag tag-glutenfrei">Glutenfrei</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Pho Bo</span><span class="menu-price">12,50 €</span></div>
+              <p>Klare Rinderbrühe, Reisnudeln, frische Kräuter</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="fleisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Pho Ga (Empfehlung: 800x600px) -->
+              <img src="images/dish-pho-ga.jpg" alt="Pho Ga" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-fleisch">Fleisch</span>
+                <span class="tag tag-glutenfrei">Glutenfrei</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Pho Ga</span><span class="menu-price">11,50 €</span></div>
+              <p>Klare Hühnerbrühe, Reisnudeln, frische Kräuter</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="vegetarisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Sommerrollen (Empfehlung: 800x600px) -->
+              <img src="images/dish-sommerrollen.jpg" alt="Sommerrollen" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-vegetarisch">Vegetarisch</span>
+                <span class="tag tag-glutenfrei">Glutenfrei</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Sommerrollen</span><span class="menu-price">6,50 €</span></div>
+              <p>Frisch gerollt, mit Erdnusssauce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAUPTGERICHTE -->
+      <div class="menu-tab-panel" id="tab-hauptgerichte">
+        <div class="menu-cards">
+          <div class="menu-card" data-category="fleisch">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Bun Cha (Empfehlung: 800x600px) -->
+              <img src="images/dish-bun-cha.jpg" alt="Bun Cha" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-fleisch">Fleisch</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Bun Cha</span><span class="menu-price">13,00 €</span></div>
+              <p>Gegrilltes Schwein, Reisnudeln, süß-saure Sauce</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="fleisch">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Com Ga (Empfehlung: 800x600px) -->
+              <img src="images/dish-com-ga.jpg" alt="Com Ga" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-fleisch">Fleisch</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Com Ga</span><span class="menu-price">12,00 €</span></div>
+              <p>Gebratenes Hähnchen mit Reis und Gemüse der Saison</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="vegetarisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Bun Xao Rau Cu (Empfehlung: 800x600px) -->
+              <img src="images/dish-bun-xao.jpg" alt="Bun Xao Rau Cu" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-vegetarisch">Vegetarisch</span>
+                <span class="tag tag-glutenfrei">Glutenfrei</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Bun Xao Rau Cu</span><span class="menu-price">11,00 €</span></div>
+              <p>Gebratene Reisnudeln mit Gemüse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANH MI -->
+      <div class="menu-tab-panel" id="tab-banh-mi">
+        <div class="menu-cards">
+          <div class="menu-card" data-category="fleisch">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Bánh Mì (Empfehlung: 800x600px) -->
+              <img src="images/dish-banh-mi.jpg" alt="Bánh Mì" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-fleisch">Fleisch</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Bánh Mì</span><span class="menu-price">8,00 €</span></div>
+              <p>Knuspriges Baguette, gefüllt nach Wahl</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="fleisch">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Frühlingsrollen (Empfehlung: 800x600px) -->
+              <img src="images/dish-fruehlingsrollen.jpg" alt="Frühlingsrollen" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-fleisch">Fleisch</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Frühlingsrollen</span><span class="menu-price">5,50 €</span></div>
+              <p>Knusprig frittiert, mit Nuoc-Cham-Sauce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GETRAENKE -->
+      <div class="menu-tab-panel" id="tab-getraenke">
+        <div class="menu-cards">
+          <div class="menu-card" data-category="vegetarisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Vietnamesischer Eiskaffee (Empfehlung: 800x600px) -->
+              <img src="images/dish-eiskaffee.jpg" alt="Vietnamesischer Eiskaffee" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-vegetarisch">Vegetarisch</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Vietnamesischer Eiskaffee</span><span class="menu-price">3,80 €</span></div>
+              <p>Mit gezuckerter Kondensmilch</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="vegetarisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Jasmintee (Empfehlung: 800x600px) -->
+              <img src="images/dish-tee.jpg" alt="Jasmintee" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-vegetarisch">Vegetarisch</span>
+                <span class="tag tag-glutenfrei">Glutenfrei</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Jasmintee</span><span class="menu-price">2,50 €</span></div>
+              <p>Warm serviert</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-tab-panel" id="tab-desserts">
+        <div class="menu-cards">
+          <div class="menu-card" data-category="vegetarisch glutenfrei">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Kokosnusspudding (Empfehlung: 800x600px) -->
+              <img src="images/dish-pudding.jpg" alt="Kokosnusspudding" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-vegetarisch">Vegetarisch</span>
+                <span class="tag tag-glutenfrei">Glutenfrei</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Kokosnusspudding</span><span class="menu-price">4,50 €</span></div>
+              <p>Cremig, mit geröstetem Kokos</p>
+            </div>
+          </div>
+          <div class="menu-card" data-category="vegetarisch">
+            <div class="menu-card-img">
+              <!-- BILD ERSETZEN: Foto Sesamkugeln (Empfehlung: 800x600px) -->
+              <img src="images/dish-sesamkugeln.jpg" alt="Sesamkugeln" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+              <div class="menu-card-tags">
+                <span class="tag tag-vegetarisch">Vegetarisch</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-item-head"><span>Sesamkugeln</span><span class="menu-price">4,00 €</span></div>
+              <p>Knusprig frittiert, gefüllt mit süßer Bohnenpaste</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /menu-tab-content -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SAISONALER FILTER
+  ════════════════════════════════════════════ -->
+  <section class="section seasonal-section" id="saisonal-filter">
+    <div class="section-head center animate">
+      <p class="eyebrow">Saisonale Auswahl</p>
+      <h2>Was passt zu Ihnen?</h2>
+      <p class="section-lede">Filtern Sie unsere Empfehlungen nach Ihrer Ernährungsweise.</p>
+    </div>
+    <div class="seasonal-filter animate">
+      <button class="filter-btn active" data-filter="all">Alle</button>
+      <button class="filter-btn" data-filter="vegetarisch">Vegetarisch</button>
+      <button class="filter-btn" data-filter="fisch">Fisch</button>
+      <button class="filter-btn" data-filter="fleisch">Fleisch</button>
+      <button class="filter-btn" data-filter="glutenfrei">Glutenfrei</button>
+    </div>
+    <div class="seasonal-grid animate">
+      <div class="seasonal-card" data-cat="fleisch glutenfrei">
+        <div class="seasonal-card-img">
+          <!-- BILD ERSETZEN: Foto Pho Bo für saisonale Auswahl (Empfehlung: 600x400px) -->
+          <img src="images/dish-pho.jpg" alt="Pho Bo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="seasonal-card-body">
+          <div class="seasonal-tags"><span class="tag tag-fleisch">Fleisch</span><span class="tag tag-glutenfrei">Glutenfrei</span></div>
+          <h3>Pho Bo</h3>
           <p>Klare Rinderbrühe, Reisnudeln, frische Kräuter</p>
+          <span class="seasonal-price">12,50 €</span>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Pho Ga</span><span class="menu-price">11,50 €</span></div>
-          <p>Klare Hühnerbrühe, Reisnudeln, frische Kräuter</p>
+      </div>
+      <div class="seasonal-card" data-cat="vegetarisch glutenfrei">
+        <div class="seasonal-card-img">
+          <!-- BILD ERSETZEN: Foto Sommerrollen für saisonale Auswahl (Empfehlung: 600x400px) -->
+          <img src="images/dish-sommerrollen.jpg" alt="Sommerrollen" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Sommerrollen</span><span class="menu-price">6,50 €</span></div>
+        <div class="seasonal-card-body">
+          <div class="seasonal-tags"><span class="tag tag-vegetarisch">Vegetarisch</span><span class="tag tag-glutenfrei">Glutenfrei</span></div>
+          <h3>Sommerrollen</h3>
           <p>Frisch gerollt, mit Erdnusssauce</p>
+          <span class="seasonal-price">6,50 €</span>
         </div>
       </div>
-    </div>
-
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Hauptgerichte</h3>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Bun Cha</span><span class="menu-price">13,00 €</span></div>
+      <div class="seasonal-card" data-cat="fleisch">
+        <div class="seasonal-card-img">
+          <!-- BILD ERSETZEN: Foto Bun Cha für saisonale Auswahl (Empfehlung: 600x400px) -->
+          <img src="images/dish-bun-cha.jpg" alt="Bun Cha" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="seasonal-card-body">
+          <div class="seasonal-tags"><span class="tag tag-fleisch">Fleisch</span></div>
+          <h3>Bun Cha</h3>
           <p>Gegrilltes Schwein, Reisnudeln, süß-saure Sauce</p>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Com Ga</span><span class="menu-price">12,00 €</span></div>
-          <p>Gebratenes Hähnchen mit Reis und Gemüse der Saison</p>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Bun Xao Rau Cu</span><span class="menu-price">11,00 €</span></div>
-          <p>Gebratene Reisnudeln mit Gemüse, vegetarisch</p>
+          <span class="seasonal-price">13,00 €</span>
         </div>
       </div>
-    </div>
-
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Bánh Mì &amp; Snacks</h3>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Bánh Mì</span><span class="menu-price">8,00 €</span></div>
-          <p>Knuspriges Baguette, gefüllt nach Wahl</p>
+      <div class="seasonal-card" data-cat="vegetarisch glutenfrei">
+        <div class="seasonal-card-img">
+          <!-- BILD ERSETZEN: Foto Bun Xao für saisonale Auswahl (Empfehlung: 600x400px) -->
+          <img src="images/dish-bun-xao.jpg" alt="Bun Xao Rau Cu" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Frühlingsrollen</span><span class="menu-price">5,50 €</span></div>
-          <p>Knusprig frittiert, mit Nuoc-Cham-Sauce</p>
+        <div class="seasonal-card-body">
+          <div class="seasonal-tags"><span class="tag tag-vegetarisch">Vegetarisch</span><span class="tag tag-glutenfrei">Glutenfrei</span></div>
+          <h3>Bun Xao Rau Cu</h3>
+          <p>Gebratene Reisnudeln mit Gemüse</p>
+          <span class="seasonal-price">11,00 €</span>
         </div>
       </div>
-    </div>
-
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Getränke</h3>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Vietnamesischer Eiskaffee</span><span class="menu-price">3,80 €</span></div>
-          <p>Mit gezuckerter Kondensmilch</p>
+      <div class="seasonal-card" data-cat="fisch">
+        <div class="seasonal-card-img">
+          <!-- BILD ERSETZEN: Foto eines Fischgerichts (Empfehlung: 600x400px) -->
+          <img src="images/dish-fisch.jpg" alt="Ca Hap — Gedämpfter Fisch" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Jasmintee</span><span class="menu-price">2,50 €</span></div>
-          <p>Warm serviert</p>
+        <div class="seasonal-card-body">
+          <div class="seasonal-tags"><span class="tag tag-fisch">Fisch</span><span class="tag tag-glutenfrei">Glutenfrei</span></div>
+          <h3>Ca Hap</h3>
+          <p>Gedämpfter Fisch mit Ingwer, Frühlingszwiebeln und Sojasauce</p>
+          <span class="seasonal-price">14,50 €</span>
         </div>
       </div>
-    </div>
-
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Desserts</h3>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Kokosnusspudding</span><span class="menu-price">4,50 €</span></div>
+      <div class="seasonal-card" data-cat="vegetarisch glutenfrei">
+        <div class="seasonal-card-img">
+          <!-- BILD ERSETZEN: Foto Kokosnusspudding für saisonale Auswahl (Empfehlung: 600x400px) -->
+          <img src="images/dish-pudding.jpg" alt="Kokosnusspudding" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="seasonal-card-body">
+          <div class="seasonal-tags"><span class="tag tag-vegetarisch">Vegetarisch</span><span class="tag tag-glutenfrei">Glutenfrei</span></div>
+          <h3>Kokosnusspudding</h3>
           <p>Cremig, mit geröstetem Kokos</p>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-head"><span>Sesamkugeln</span><span class="menu-price">4,00 €</span></div>
-          <p>Knusprig frittiert, gefüllt mit süßer Bohnenpaste</p>
+          <span class="seasonal-price">4,50 €</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section split" id="ueber-uns">
-    <div class="split-text animate-left">
+  <!-- ═══════════════════════════════════════════
+       HORIZONTAL SCROLL — GERICHTE IM ÜBERBLICK
+  ════════════════════════════════════════════ -->
+  <div class="dishes-scroll-section">
+    <div class="section dishes-scroll-header animate">
+      <p class="eyebrow">Gerichte im Überblick</p>
+      <h2>Von der Suppe bis zum Dessert</h2>
+    </div>
+    <div class="dishes-scroll-track-wrap">
+      <div class="dishes-scroll-track">
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Pho Bo (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-pho.jpg" alt="Pho Bo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Pho Bo</p>
+          <p class="dish-scroll-price">12,50 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Sommerrollen (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-sommerrollen.jpg" alt="Sommerrollen" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Sommerrollen</p>
+          <p class="dish-scroll-price">6,50 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Bun Cha (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-bun-cha.jpg" alt="Bun Cha" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Bun Cha</p>
+          <p class="dish-scroll-price">13,00 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Bánh Mì (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-banh-mi.jpg" alt="Bánh Mì" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Bánh Mì</p>
+          <p class="dish-scroll-price">8,00 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Com Ga (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-com-ga.jpg" alt="Com Ga" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Com Ga</p>
+          <p class="dish-scroll-price">12,00 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Vietnamesischer Eiskaffee (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-eiskaffee.jpg" alt="Vietnamesischer Eiskaffee" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Eiskaffee</p>
+          <p class="dish-scroll-price">3,80 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Sesamkugeln (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-sesamkugeln.jpg" alt="Sesamkugeln" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Sesamkugeln</p>
+          <p class="dish-scroll-price">4,00 €</p>
+        </div>
+        <div class="dish-scroll-card">
+          <!-- BILD ERSETZEN: Kleines Foto Kokosnusspudding (Empfehlung: 400x300px) -->
+          <div class="dish-scroll-img"><img src="images/dish-pudding.jpg" alt="Kokosnusspudding" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')"></div>
+          <p class="dish-scroll-name">Kokosnusspudding</p>
+          <p class="dish-scroll-price">4,50 €</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ÜBER UNS — Bild links, Text rechts (umgekehrt)
+  ════════════════════════════════════════════ -->
+  <section class="section split split-reverse" id="ueber-uns">
+    <div class="split-media leaf-media animate-left">
+      <!-- BILD ERSETZEN: Foto vom Innenraum oder Außenbereich (Empfehlung: 1200x900px) -->
+      <img src="images/gallery-1.jpg" alt="Innenraum des Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+    </div>
+    <div class="split-text animate-right">
       <p class="eyebrow">Über uns</p>
       <h2>Ein einfaches Speiselokal mit viel Charakter</h2>
       <p>Das Phoenix Restaurant an der Herzogstraße versteht sich bewusst als einfaches, bodenständiges Speiselokal — familiär geführt, mit traditionellen Rezepten und einem kleinen, gemütlichen Außenbereich für sonnige Tage.</p>
       <p>Kein aufwendiges Fine-Dining-Konzept, sondern ehrliche vietnamesische Küche, die überzeugt: klare Brühen, frische Kräuter und Gerichte, die nach Familienrezepten zubereitet werden.</p>
-      <p>Das zeigen auch die über 320 Bewertungen unserer Gäste — viele von ihnen kommen seit Jahren immer wieder vorbei.</p>
       <p>Gemüse und Kräuter kaufen wir bevorzugt frisch ein, damit die Aromen unserer Gerichte so klar bleiben, wie sie sein sollen — ganz ohne Fertigware oder Umwege.</p>
       <a href="#galerie" class="link-arrow">Einblicke ins Restaurant →</a>
     </div>
-    <div class="split-media leaf-media animate-right">
-      <!-- BILD ERSETZEN: Foto vom Innenraum oder Außenbereich (Empfehlung: 1200x900px) -->
-      <img src="images/gallery-1.jpg" alt="Innenraum des Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       KULTUREN-REISE SLIDER
+  ════════════════════════════════════════════ -->
+  <section class="section culture-section" id="kuechen-reise">
+    <div class="culture-deco-char" aria-hidden="true">Phở</div>
+    <div class="section-head animate">
+      <p class="eyebrow">Unsere Küchen-Reise</p>
+      <h2>Vier Kulturen, ein Tisch</h2>
+      <p class="section-lede">Im Phoenix begegnen sich Aromen aus Vietnam, Japan, Thailand und der modernen Fusionsküche.</p>
+    </div>
+    <div class="culture-slider-wrap animate">
+      <div class="culture-slider-viewport">
+        <div class="culture-slider-track" id="cultureTrack">
+
+          <!-- Vietnam -->
+          <div class="culture-card">
+            <div class="culture-card-img">
+              <!-- BILD ERSETZEN: Stimmungsbild Vietnam / Pho (Empfehlung: 700x480px) -->
+              <img src="images/culture-vietnam.jpg" alt="Vietnamesische Küche" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="culture-card-body">
+              <p class="culture-flag-label">Vietnam</p>
+              <h3>Die Heimat der Pho</h3>
+              <p>Klare, langsam gekochte Brühen, frische Kräuter und Reisnudeln bilden das Fundament unserer Küche. Rezepte, die über Generationen weitergegeben wurden — und heute in Düsseldorf zu erleben sind.</p>
+              <ul class="culture-dishes">
+                <li>Pho Bo — Klare Rinderbrühe</li>
+                <li>Bun Cha — Gegrilltes Schwein</li>
+                <li>Sommerrollen mit Erdnusssauce</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Japan -->
+          <div class="culture-card">
+            <div class="culture-card-img">
+              <!-- BILD ERSETZEN: Stimmungsbild Japan / asiatische Küche (Empfehlung: 700x480px) -->
+              <img src="images/culture-japan.jpg" alt="Japanische Einflüsse" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="culture-card-body">
+              <p class="culture-flag-label">Japan</p>
+              <h3>Stille Präzision</h3>
+              <p>Die japanische Küche lehrt uns Geduld und Sorgfalt: Wenige Zutaten, perfekt aufeinander abgestimmt. Dieses Prinzip fließt in unsere Zubereitungsweise ein — klar, konzentriert, ohne Ablenkung.</p>
+              <ul class="culture-dishes">
+                <li>Umami-reiche Brühen</li>
+                <li>Sesamaromen in Saucen</li>
+                <li>Präzise Schnittführung im Gemüse</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Thailand -->
+          <div class="culture-card">
+            <div class="culture-card-img">
+              <!-- BILD ERSETZEN: Stimmungsbild Thailand / scharfe Küche (Empfehlung: 700x480px) -->
+              <img src="images/culture-thailand.jpg" alt="Thailändische Einflüsse" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="culture-card-body">
+              <p class="culture-flag-label">Thailand</p>
+              <h3>Würze und Balance</h3>
+              <p>Thailand bringt die mutige Schärfe und das lebhafte Zusammenspiel von süß, sauer, salzig und scharf. Gerichte, die auf der Zunge tanzen — und die wir auf Wunsch in ihrer Intensität anpassen.</p>
+              <ul class="culture-dishes">
+                <li>Chiliaromen in Nuoc Cham</li>
+                <li>Limetten-Akzente im Salat</li>
+                <li>Frischer Koriander als Abschluss</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fusion -->
+          <div class="culture-card">
+            <div class="culture-card-img">
+              <!-- BILD ERSETZEN: Stimmungsbild Fusion / modernes Gericht (Empfehlung: 700x480px) -->
+              <img src="images/culture-fusion.jpg" alt="Asiatische Fusionsküche" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="culture-card-body">
+              <p class="culture-flag-label">Fusion</p>
+              <h3>Wo Kulturen sich begegnen</h3>
+              <p>Das Bánh Mì ist das perfekte Beispiel: Ein Baguette aus der französischen Kolonialzeit, gefüllt mit vietnamesischen Zutaten. Im Phoenix ehren wir solche Begegnungen — und schaffen eigene.</p>
+              <ul class="culture-dishes">
+                <li>Bánh Mì — Franko-Vietnamesisch</li>
+                <li>Saisonale Gerichte mit regionalen Zutaten</li>
+                <li>Kokosnusspudding mit Röstaromen</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /culture-slider-track -->
+      </div>
+
+      <div class="culture-nav">
+        <button class="culture-arrow" id="culturePrev" aria-label="Vorherige Kultur">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="culture-dots" id="cultureDots">
+          <button class="culture-dot active" data-index="0" aria-label="Vietnam"></button>
+          <button class="culture-dot" data-index="1" aria-label="Japan"></button>
+          <button class="culture-dot" data-index="2" aria-label="Thailand"></button>
+          <button class="culture-dot" data-index="3" aria-label="Fusion"></button>
+        </div>
+        <button class="culture-arrow" id="cultureNext" aria-label="Nächste Kultur">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
     </div>
   </section>
 
-  <section class="section ingredients-section" id="zutaten">
-    <div class="section-head center animate">
+  <!-- ═══════════════════════════════════════════
+       FULL-BLEED — SAISONAL & FRISCH
+       (Diagonal-Trenner ober + unten via clip-path)
+  ════════════════════════════════════════════ -->
+  <section class="full-bleed-section" id="saisonal">
+    <!-- BILD ERSETZEN: Großes Hintergrundfoto Markt / Kräuter / Küche (Empfehlung: 1920x900px) -->
+    <div class="full-bleed-bg" style="background-image: url('images/seasonal-bg.jpg')"></div>
+    <div class="full-bleed-overlay">
+      <div class="full-bleed-inner animate">
+        <p class="eyebrow eyebrow-invert">Saisonal &amp; Frisch</p>
+        <h2>Jeden Tag frisch eingekauft</h2>
+        <p>Gemüse und Kräuter kaufen wir täglich frisch ein. Was auf den Tisch kommt, hängt von der Jahreszeit ab — und das schmeckt man.</p>
+        <a href="#reservierung" class="btn btn-light">Tisch reservieren</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ASYMMETRISCHES 40:60 SPLIT — Über die Zutaten
+  ════════════════════════════════════════════ -->
+  <section class="section split split-asymmetric" id="zutaten">
+    <div class="split-text animate-left">
       <p class="eyebrow">Zutaten</p>
       <h2>Frische, die man schmeckt</h2>
-      <p class="section-lede">Diese Zutaten kommen in unseren Gerichten immer wieder zusammen.</p>
+      <p>Diese Zutaten begegnen Ihnen in unseren Gerichten immer wieder — weil wir sie täglich frisch beziehen und nichts davon ersetzen, was ein Gericht ausmacht.</p>
     </div>
     <div class="ingredient-cluster animate-scale" aria-hidden="false">
       <div class="ingredient-circle ic-1"><span>Reisnudeln</span></div>
@@ -194,6 +613,9 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       WHY SECTION
+  ════════════════════════════════════════════ -->
   <section class="section why-section">
     <div class="section-head center animate">
       <p class="eyebrow">Warum Phoenix</p>
@@ -223,31 +645,168 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       GALERIE — Lightbox + Überlappende Karten
+  ════════════════════════════════════════════ -->
   <section class="section" id="galerie">
     <div class="section-head animate">
       <p class="eyebrow">Galerie</p>
       <h2>Ein Blick ins Phoenix</h2>
+      <p class="section-lede">Klicken Sie auf ein Bild für die Vollansicht.</p>
     </div>
-    <div class="gallery-grid animate">
-      <div class="gallery-item gallery-item-arch">
-        <!-- BILD ERSETZEN: Foto eines Gerichts -->
-        <img src="images/gallery-1.jpg" alt="Gericht im Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+    <div class="gallery-grid-overlap animate">
+      <div class="gallery-item gallery-item-arch gallery-ol-1">
+        <!-- BILD ERSETZEN: Foto eines Gerichts / Pho (Empfehlung: 800x1000px) -->
+        <img class="gallery-lightbox-trigger" src="images/gallery-1.jpg" alt="Gericht im Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
-      <div class="gallery-item">
-        <!-- BILD ERSETZEN: Foto vom Außenbereich -->
-        <img src="images/gallery-2.jpg" alt="Außenbereich des Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-ol-2">
+        <!-- BILD ERSETZEN: Foto vom Außenbereich (Empfehlung: 800x600px) -->
+        <img class="gallery-lightbox-trigger" src="images/gallery-2.jpg" alt="Außenbereich des Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
-      <div class="gallery-item">
-        <!-- BILD ERSETZEN: Foto vom Innenraum -->
-        <img src="images/gallery-1.jpg" alt="Innenraum des Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-item-arch gallery-ol-3">
+        <!-- BILD ERSETZEN: Foto vom Innenraum (Empfehlung: 800x1000px) -->
+        <img class="gallery-lightbox-trigger" src="images/gallery-3.jpg" alt="Innenraum des Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
-      <div class="gallery-item gallery-item-arch">
-        <!-- BILD ERSETZEN: Foto einer Suppe -->
-        <img src="images/gallery-2.jpg" alt="Pho im Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-ol-4">
+        <!-- BILD ERSETZEN: Foto einer Suppe / Pho (Empfehlung: 800x600px) -->
+        <img class="gallery-lightbox-trigger" src="images/gallery-4.jpg" alt="Pho im Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="gallery-item gallery-ol-5">
+        <!-- BILD ERSETZEN: Foto der Küche oder Zutaten (Empfehlung: 800x600px) -->
+        <img class="gallery-lightbox-trigger" src="images/gallery-5.jpg" alt="Küche im Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="gallery-item gallery-ol-6">
+        <!-- BILD ERSETZEN: Foto von Sommerrollen oder Frühlingsrollen (Empfehlung: 800x600px) -->
+        <img class="gallery-lightbox-trigger" src="images/gallery-6.jpg" alt="Sommerrollen im Phoenix Restaurant" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       BEWERTUNGEN
+  ════════════════════════════════════════════ -->
+  <section class="section reviews">
+    <div class="section-head center animate">
+      <p class="eyebrow">Bewertungen</p>
+      <div class="reviews-score">
+        <span class="score-number">4,5</span>
+        <span class="score-stars">★★★★</span>
+        <span class="score-count">323 Google-Bewertungen</span>
+      </div>
+    </div>
+    <div class="review-grid animate">
+      <blockquote class="review-card">
+        <p>„Ehrliches, frisches Essen wie bei Freunden zuhause. Der Außenbereich ist im Sommer besonders schön."</p>
+        <cite>— Google-Rezension</cite>
+      </blockquote>
+      <blockquote class="review-card">
+        <p>„Die Pho ist klar und aromatisch, nicht zu schwer — genau wie sie sein soll."</p>
+        <cite>— Google-Rezension</cite>
+      </blockquote>
+      <blockquote class="review-card">
+        <p>„Familiär, freundlich und ehrlich bepreist. Kommen gerne wieder."</p>
+        <cite>— Google-Rezension</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       RESERVIERUNGSFORMULAR — Asymmetrisch 40:60
+  ════════════════════════════════════════════ -->
+  <section class="section reservation-section" id="reservierung">
+    <div class="reservation-grid">
+      <div class="reservation-info animate-left">
+        <p class="eyebrow">Reservierung</p>
+        <h2>Tisch reservieren</h2>
+        <p>Sichern Sie sich Ihren Platz im Phoenix. Für spontane Besuche kleiner Gruppen sind wir meist auch ohne Voranmeldung da — bei größeren Runden freuen wir uns über eine Ankündigung.</p>
+        <div class="res-info-list">
+          <div class="res-info-item">
+            <span class="res-info-label">Telefon</span>
+            <a href="tel:+4921133683033">+49 211 33683033</a>
+          </div>
+          <div class="res-info-item">
+            <span class="res-info-label">Adresse</span>
+            <span>Herzogstraße 5, 40217 Düsseldorf</span>
+          </div>
+          <div class="res-info-item">
+            <span class="res-info-label">Öffnungszeiten</span>
+            <span>Täglich 11:30 – 22:00 Uhr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reservation-form-wrap animate-right">
+        <div class="reservation-success" id="reservationSuccess" hidden>
+          <div class="success-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.6"/><path d="M15 24l7 7 11-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Anfrage gesendet</h3>
+          <p>Wir melden uns schnellstmöglich bei Ihnen, um Ihren Tisch zu bestätigen. Bis bald im Phoenix.</p>
+        </div>
+        <form class="reservation-form" id="reservationForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name">Name *</label>
+              <input type="text" id="res-name" name="name" placeholder="Ihr Name" autocomplete="name" required>
+              <span class="form-error" id="err-name">Bitte geben Sie Ihren Namen ein.</span>
+            </div>
+            <div class="form-group">
+              <label for="res-email">E-Mail *</label>
+              <input type="email" id="res-email" name="email" placeholder="ihre@email.de" autocomplete="email" required>
+              <span class="form-error" id="err-email">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Datum *</label>
+              <input type="date" id="res-date" name="date" required>
+              <span class="form-error" id="err-date">Bitte wählen Sie ein Datum.</span>
+            </div>
+            <div class="form-group">
+              <label for="res-time">Uhrzeit *</label>
+              <input type="time" id="res-time" name="time" min="11:30" max="21:30" required>
+              <span class="form-error" id="err-time">Bitte wählen Sie eine Uhrzeit (11:30–21:30 Uhr).</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-persons">Personen *</label>
+              <select id="res-persons" name="persons" required>
+                <option value="">Anzahl wählen</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Personen</option>
+                <option value="3">3 Personen</option>
+                <option value="4">4 Personen</option>
+                <option value="5">5 Personen</option>
+                <option value="6">6 Personen</option>
+                <option value="7+">7 oder mehr</option>
+              </select>
+              <span class="form-error" id="err-persons">Bitte wählen Sie die Personenanzahl.</span>
+            </div>
+            <div class="form-group">
+              <label for="res-anlass">Anlass</label>
+              <select id="res-anlass" name="anlass">
+                <option value="">Kein besonderer Anlass</option>
+                <option value="geburtstag">Geburtstag</option>
+                <option value="romantisch">Romantisches Dinner</option>
+                <option value="geschaeft">Geschäftsessen</option>
+                <option value="sonstiges">Sonstiges</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="res-message">Anmerkungen</label>
+            <textarea id="res-message" name="message" rows="3" placeholder="Besondere Wünsche, Allergien, Sonderwünsche..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Reservierungsanfrage senden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ════════════════════════════════════════════ -->
   <section class="section faq-section" id="faq">
     <div class="section-head animate">
       <p class="eyebrow">FAQ</p>
@@ -260,7 +819,7 @@
       </details>
       <details class="faq-item">
         <summary>Muss ich einen Tisch reservieren?</summary>
-        <p>Für kleinere Gruppen ist spontanes Vorbeikommen meist möglich, bei größeren Runden empfehlen wir eine Reservierung.</p>
+        <p>Für kleinere Gruppen ist spontanes Vorbeikommen meist möglich, bei größeren Runden empfehlen wir eine Reservierung über unser <a href="#reservierung" style="color: var(--color-accent);">Formular</a> oder telefonisch.</p>
       </details>
       <details class="faq-item">
         <summary>Gibt es Essen zum Mitnehmen?</summary>
@@ -285,36 +844,104 @@
     </div>
   </section>
 
-  <section class="section reviews">
-    <div class="section-head center animate">
-      <p class="eyebrow">Bewertungen</p>
-      <div class="reviews-score">
-        <span class="score-number">4,5</span>
-        <span class="score-stars">★★★★</span>
-        <span class="score-count">323 Google-Bewertungen</span>
-      </div>
+  <!-- ═══════════════════════════════════════════
+       SO FINDEN SIE UNS — SVG-Stilkarte + Adresse
+  ════════════════════════════════════════════ -->
+  <section class="section find-us-section" id="so-finden-sie-uns">
+    <div class="section-head animate">
+      <p class="eyebrow">Anfahrt</p>
+      <h2>So finden Sie uns</h2>
     </div>
-    <div class="review-grid animate">
-      <blockquote class="review-card">
-        <p>„Ehrliches, frisches Essen wie bei Freunden zuhause. Der Außenbereich ist im Sommer besonders schön.“</p>
-        <cite>— Google-Rezension</cite>
-      </blockquote>
-      <blockquote class="review-card">
-        <p>„Die Pho ist klar und aromatisch, nicht zu schwer — genau wie sie sein soll.“</p>
-        <cite>— Google-Rezension</cite>
-      </blockquote>
-      <blockquote class="review-card">
-        <p>„Familiär, freundlich und ehrlich bepreist. Kommen gerne wieder.“</p>
-        <cite>— Google-Rezension</cite>
-      </blockquote>
+    <div class="find-us-grid">
+      <div class="style-map-wrap animate-left">
+        <svg class="style-map" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" aria-label="Stilisierte Karte des Phoenix Restaurant Standorts in Düsseldorf-Unterbilk">
+          <!-- Hintergrund -->
+          <rect width="600" height="420" fill="#e8e3d7" rx="6"/>
+
+          <!-- Hauptstraßen horizontal -->
+          <rect x="0" y="148" width="600" height="22" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+          <rect x="0" y="68" width="600" height="14" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+          <rect x="0" y="290" width="600" height="14" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+          <rect x="0" y="360" width="600" height="14" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+
+          <!-- Hauptstraßen vertikal -->
+          <rect x="130" y="0" width="16" height="420" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+          <rect x="290" y="0" width="16" height="420" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+          <rect x="450" y="0" width="16" height="420" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.5"/>
+          <rect x="60" y="0" width="10" height="420" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.4"/>
+          <rect x="370" y="0" width="10" height="420" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.4"/>
+          <rect x="520" y="0" width="10" height="420" fill="#f2ede4" stroke="#ccc7bb" stroke-width="0.4"/>
+
+          <!-- Gebäudeblöcke -->
+          <rect x="76"  y="84"  width="48" height="56" rx="3" fill="#d9d3c6"/>
+          <rect x="148" y="84"  width="136" height="56" rx="3" fill="#d9d3c6"/>
+          <rect x="306" y="84"  width="138" height="56" rx="3" fill="#d9d3c6"/>
+          <rect x="76"  y="176" width="48" height="106" rx="3" fill="#d9d3c6"/>
+          <rect x="148" y="176" width="136" height="106" rx="3" fill="#d9d3c6"/>
+          <rect x="306" y="176" width="78" height="106" rx="3" fill="#d9d3c6"/>
+          <rect x="396" y="176" width="48" height="106" rx="3" fill="#d9d3c6"/>
+          <rect x="466" y="176" width="44" height="106" rx="3" fill="#d9d3c6"/>
+          <rect x="76"  y="306" width="48" height="46" rx="3" fill="#d9d3c6"/>
+          <rect x="148" y="306" width="136" height="46" rx="3" fill="#d9d3c6"/>
+          <rect x="306" y="306" width="138" height="46" rx="3" fill="#d9d3c6"/>
+
+          <!-- Straßenname Herzogstraße -->
+          <text x="200" y="144" text-anchor="middle" fill="#7a7465" font-size="11" font-family="Inter, sans-serif" font-weight="600" letter-spacing="0.05em">Herzogstraße</text>
+          <text x="298" y="62" text-anchor="middle" fill="#7a7465" font-size="9" font-family="Inter, sans-serif" transform="rotate(-90 298 62)">Klosterstraße</text>
+
+          <!-- Restaurant-Marker -->
+          <circle cx="298" cy="159" r="22" fill="#4b7a52" opacity="0.18"/>
+          <circle cx="298" cy="159" r="12" fill="#4b7a52"/>
+          <circle cx="298" cy="159" r="5" fill="#ffffff"/>
+
+          <!-- Label -->
+          <rect x="248" y="120" width="100" height="28" rx="4" fill="#375c3c"/>
+          <text x="298" y="138" text-anchor="middle" fill="#ffffff" font-size="11.5" font-family="Inter, sans-serif" font-weight="700" letter-spacing="0.03em">Phoenix</text>
+
+          <!-- Kompassrose -->
+          <g transform="translate(558, 30)">
+            <circle cx="0" cy="0" r="16" fill="#f2ede4" stroke="#ccc7bb" stroke-width="1"/>
+            <text x="0" y="-5" text-anchor="middle" fill="#4b7a52" font-size="10" font-family="Inter, sans-serif" font-weight="700">N</text>
+            <line x1="0" y1="-12" x2="0" y2="12" stroke="#ccc7bb" stroke-width="1"/>
+            <line x1="-12" y1="0" x2="12" y2="0" stroke="#ccc7bb" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="find-us-info animate-right">
+        <div class="find-us-block">
+          <h3>Adresse</h3>
+          <p>Herzogstraße 5<br>40217 Düsseldorf-Unterbilk</p>
+        </div>
+        <div class="find-us-block">
+          <h3>Öffnungszeiten</h3>
+          <table class="hours-table-styled">
+            <tr><td>Montag – Sonntag</td><td>11:30 – 22:00 Uhr</td></tr>
+          </table>
+        </div>
+        <div class="find-us-block">
+          <h3>Anreise</h3>
+          <p><strong>U-Bahn:</strong> Heinrich-Heine-Allee (U70, U74, U75, U76, U77) — 8 Minuten Fußweg</p>
+          <p><strong>Bus:</strong> Linie 725 Haltestelle Herzogstraße</p>
+          <p><strong>Parken:</strong> Parkhaus Carlsplatz in unmittelbarer Nähe</p>
+        </div>
+        <div class="find-us-block">
+          <h3>Kontakt</h3>
+          <p><a href="tel:+4921133683033" class="find-us-phone">+49 211 33683033</a></p>
+          <a href="#reservierung" class="btn btn-primary" style="margin-top: 12px; display: inline-block;">Tisch reservieren</a>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       CTA BAND
+  ════════════════════════════════════════════ -->
   <section class="section cta-band" id="kontakt">
     <div class="cta-inner animate">
       <div>
         <p class="eyebrow eyebrow-invert">Kontakt</p>
-        <h2>Tisch reservieren</h2>
+        <h2>Wir freuen uns auf Sie</h2>
         <p>Vor Ort mit Außenbereich, zum Mitnehmen oder kontaktlose Lieferung.</p>
       </div>
       <div class="cta-actions">
@@ -324,17 +951,11 @@
     </div>
   </section>
 
-  <section class="map-section">
-    <iframe
-      title="Anfahrt Phoenix Restaurant"
-      src="https://www.google.com/maps?q=Herzogstra%C3%9Fe+5,+40217+D%C3%BCsseldorf&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
-
 </main>
 
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-col">
@@ -351,14 +972,16 @@
     <div class="footer-col">
       <p class="footer-heading">Navigation</p>
       <p><a href="#speisekarte">Speisekarte</a></p>
-      <p><a href="#ueber-uns">Über uns</a></p>
+      <p><a href="#kuechen-reise">Küchen-Reise</a></p>
       <p><a href="#galerie">Galerie</a></p>
+      <p><a href="#reservierung">Reservierung</a></p>
       <p><a href="#faq">FAQ</a></p>
     </div>
     <div class="footer-col">
       <p class="footer-heading">Kontakt</p>
       <p><a href="tel:+4921133683033">+49 211 33683033</a></p>
-      <p><a href="#kontakt">Tisch reservieren</a></p>
+      <p><a href="#reservierung">Tisch reservieren</a></p>
+      <p><a href="#so-finden-sie-uns">Anfahrt</a></p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -367,6 +990,233 @@
   </div>
 </footer>
 
+<!-- ═══════════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Vorheriges Bild">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="lightbox-img-wrap">
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+  <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Nächstes Bild">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SCROLL-TO-TOP BUTTON
+════════════════════════════════════════════ -->
+<button class="scroll-top-btn" id="scrollToTop" aria-label="Nach oben scrollen">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
 <script src="script.js"></script>
+
+<!-- ═══════════════════════════════════════════
+     INLINE JS — Neue Interaktionen
+     (script.js wird NIEMALS geändert)
+════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ─── Menu Tab-Switcher ─────────────────────── */
+  var tabs = document.querySelectorAll('.menu-tab');
+  var panels = document.querySelectorAll('.menu-tab-panel');
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = this.dataset.tab;
+
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      panels.forEach(function (p) {
+        p.classList.remove('active');
+        p.setAttribute('aria-hidden', 'true');
+      });
+
+      this.classList.add('active');
+      var targetPanel = document.getElementById('tab-' + target);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+        targetPanel.removeAttribute('aria-hidden');
+      }
+    });
+  });
+
+  /* ─── Saisonaler Filter ─────────────────────── */
+  var filterBtns = document.querySelectorAll('.seasonal-filter .filter-btn');
+  var seasonalCards = document.querySelectorAll('.seasonal-grid .seasonal-card');
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = this.dataset.filter;
+
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      this.classList.add('active');
+
+      seasonalCards.forEach(function (card) {
+        var cats = card.dataset.cat || '';
+        if (filter === 'all' || cats.indexOf(filter) !== -1) {
+          card.classList.remove('hidden-card');
+        } else {
+          card.classList.add('hidden-card');
+        }
+      });
+    });
+  });
+
+  /* ─── Kulturen-Reise Slider ─────────────────── */
+  var cultureTrack = document.getElementById('cultureTrack');
+  var cultureDots  = document.querySelectorAll('.culture-dot');
+  var cultureCards = document.querySelectorAll('.culture-card');
+  var currentCulture = 0;
+
+  function goToCulture(idx) {
+    var total = cultureCards.length;
+    currentCulture = ((idx % total) + total) % total;
+    if (cultureTrack) {
+      cultureTrack.style.transform = 'translateX(-' + (currentCulture * 100) + '%)';
+    }
+    cultureDots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === currentCulture);
+    });
+  }
+
+  var prevBtn = document.getElementById('culturePrev');
+  var nextBtn = document.getElementById('cultureNext');
+  if (prevBtn) prevBtn.addEventListener('click', function () { goToCulture(currentCulture - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { goToCulture(currentCulture + 1); });
+
+  cultureDots.forEach(function (dot) {
+    dot.addEventListener('click', function () { goToCulture(parseInt(this.dataset.index, 10)); });
+  });
+
+  /* Touch-Swipe für Culture Slider */
+  var sliderVP = document.querySelector('.culture-slider-viewport');
+  if (sliderVP) {
+    var touchStartX = 0;
+    sliderVP.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    sliderVP.addEventListener('touchend', function (e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        goToCulture(diff > 0 ? currentCulture + 1 : currentCulture - 1);
+      }
+    });
+  }
+
+  /* ─── Lightbox ──────────────────────────────── */
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxCap   = document.getElementById('lightboxCaption');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var lightboxPrev  = document.getElementById('lightboxPrev');
+  var lightboxNext  = document.getElementById('lightboxNext');
+  var triggers      = Array.from(document.querySelectorAll('.gallery-lightbox-trigger'));
+  var currentLB     = 0;
+
+  function openLightbox(idx) {
+    if (!triggers.length || !lightbox) return;
+    currentLB = ((idx % triggers.length) + triggers.length) % triggers.length;
+    var img = triggers[currentLB];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    if (lightboxCap) lightboxCap.textContent = img.alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach(function (img, i) {
+    img.closest('.gallery-item').style.cursor = 'pointer';
+    img.closest('.gallery-item').addEventListener('click', function () { openLightbox(i); });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+  if (lightboxPrev) lightboxPrev.addEventListener('click', function () { openLightbox(currentLB - 1); });
+  if (lightboxNext) lightboxNext.addEventListener('click', function () { openLightbox(currentLB + 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox || !lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowRight')  openLightbox(currentLB + 1);
+    if (e.key === 'ArrowLeft')   openLightbox(currentLB - 1);
+  });
+
+  /* ─── Reservierungsformular Validierung ──────── */
+  var resForm    = document.getElementById('reservationForm');
+  var resSuccess = document.getElementById('reservationSuccess');
+
+  if (resForm) {
+    resForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var isValid = true;
+
+      function validate(id, errId, checkFn) {
+        var field = document.getElementById(id);
+        var err   = document.getElementById(errId);
+        if (!field) return;
+        var ok = checkFn(field.value.trim());
+        field.classList.toggle('invalid', !ok);
+        if (err) err.style.display = ok ? 'none' : 'block';
+        if (!ok) isValid = false;
+      }
+
+      validate('res-name',    'err-name',    function (v) { return v.length >= 2; });
+      validate('res-email',   'err-email',   function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); });
+      validate('res-date',    'err-date',    function (v) { return v !== ''; });
+      validate('res-time',    'err-time',    function (v) { return v !== ''; });
+      validate('res-persons', 'err-persons', function (v) { return v !== ''; });
+
+      if (isValid && resSuccess) {
+        resForm.style.display = 'none';
+        resSuccess.removeAttribute('hidden');
+        resSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+
+    /* Live-Entfernung der Fehlermarkierung */
+    resForm.querySelectorAll('input, select').forEach(function (field) {
+      field.addEventListener('input', function () {
+        this.classList.remove('invalid');
+        var errId = 'err-' + this.id.replace('res-', '');
+        var err = document.getElementById(errId);
+        if (err) err.style.display = 'none';
+      });
+    });
+  }
+
+  /* ─── Scroll-to-Top Button ──────────────────── */
+  var scrollBtn = document.getElementById('scrollToTop');
+  if (scrollBtn) {
+    window.addEventListener('scroll', function () {
+      scrollBtn.classList.toggle('visible', window.scrollY > 480);
+    }, { passive: true });
+    scrollBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+})();
+</script>
 </body>
 </html>
